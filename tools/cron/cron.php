@@ -1,6 +1,3 @@
-<?php 
-$title = "The Cron Job";
-include "../../../incl/load_top.php" ?>
 <?php
 chdir(dirname(__FILE__));
 set_time_limit(0);
@@ -24,4 +21,3 @@ ob_flush();
 flush();
 file_put_contents("../logs/cronlastrun.txt",time());
 ?>
-<?php include "../../../incl/load_bottom.php" ?>

@@ -1,6 +1,3 @@
-<?php 
-$title = "Top Daily Progress";
-include "../../../incl/load_top.php" ?>
 <h1>TOP DAILY PROGRESS</h1>
 <table border="1"><tr><th>#</th><th>UserID</th><th>UserName</th><th>Stars</th></tr>
 <?php
@@ -27,9 +24,8 @@ foreach ($starsgain as $userID => $stars){
 	$username = htmlspecialchars($userinfo["userName"], ENT_QUOTES);
 	if($userinfo["isBanned"] == 0){
 		$x++;
-		echo "<tr><td>$x</td><td>$userID</td><td><a href='https:////onepoint6ps.7m.pl/u/user.php?userID=$userID'>$username</a></td><td>$stars</td></tr>";
+		echo "<tr><td>$x</td><td>$userID</td><td>$username</td><td>$stars</td></tr>";
 	}
 }  
 ?>
 </table>
-<?php include "../../../incl/load_bottom.php" ?>

@@ -1,6 +1,3 @@
-<?php 
-$title = "Top Weekly Progress";
-include "../../../incl/load_top.php" ?>
 <h1>TOP WEEKLY PROGRESS</h1>
 <table border="1"><tr><th>#</th><th>UserID</th><th>UserName</th><th>Stars</th></tr>
 <?php

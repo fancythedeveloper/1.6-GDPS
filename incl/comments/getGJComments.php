@@ -53,6 +53,7 @@ foreach($result as &$comment1) {
 		$uploadDate = date("d/m/Y G.i", $comment1["timestamp"]);
 		$actualcomment = $comment1["comment"];
 		if($gameVersion < 20){
+		    // Change 1 to whichever userID belongs to the owner. On onepoint6ps it's 1
 		    if ($comment1['userID'] == 1) {
 		        $actualcomment = "<cl>".base64_decode($actualcomment)."</c>";
 		    } else {

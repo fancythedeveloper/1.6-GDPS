@@ -1,9 +1,6 @@
-<?php 
-$title = "Statistics";
-include "../../../incl/load_top.php" ?>
 <h1>Levels</h1>
 <table border="1">
-<tr><th>Difficulty</th><th>Total</th><th>Unrated</th><th>Rated</th><th>Featured</th><th>Contest Winner</th></tr>
+<tr><th>Difficulty</th><th>Total</th><th>Unrated</th><th>Rated</th><th>Featured</th><th>Levels with Bonus CP</th></tr>
 <?php
 include "../../incl/lib/connection.php";
 function genLvlRow($params, $params2, $params3, $params4){
@@ -52,4 +49,3 @@ $thing = $query->fetchColumn();
 echo "<tr><td>Active</td><td>$thing</td></tr>";
 ?>
 </table>
-<?php include "../../../incl/load_bottom.php" ?>

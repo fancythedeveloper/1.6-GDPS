@@ -545,7 +545,9 @@ CREATE TABLE `users` (
   `chest1count` int(11) NOT NULL DEFAULT 0,
   `chest2count` int(11) NOT NULL DEFAULT 0,
   `isBanned` int(11) NOT NULL DEFAULT 0,
-  `isCreatorBanned` int(11) NOT NULL DEFAULT 0
+  `isCreatorBanned` int(11) NOT NULL DEFAULT 0,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `country` varchar(3) NOT NULL DEFAULT '',
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -754,7 +756,9 @@ ALTER TABLE `users`
   ADD KEY `orbs` (`orbs`),
   ADD KEY `completedLvls` (`completedLvls`),
   ADD KEY `isBanned` (`isBanned`),
-  ADD KEY `isCreatorBanned` (`isCreatorBanned`);
+  ADD KEY `isCreatorBanned` (`isCreatorBanned`),
+  ADD KEY `title` (`title`),
+  ADD KEY `country` (`country`);
 
 --
 -- AUTO_INCREMENT for dumped tables

@@ -1,6 +1,3 @@
-<?php 
-$title = "Map Packs";
-include "../../../incl/load_top.php" ?>
 <h1>MAP PACKS</h1>
 <table border="1"><tr><th>#</th><th>ID</th><th>Map Pack</th><th>Stars</th><th>Coins</th><th>Levels</th></tr>
 <?php
@@ -19,7 +16,7 @@ foreach($result as &$pack){
 		$query = $db->prepare("SELECT levelName FROM levels WHERE levelID = :levelID");
 		$query->execute([':levelID' => $lvl]);
 		$levelName = $query->fetchColumn();
-		echo "<a href='https://onepoint6ps.7m.pl/b/level.php?levelID=$lvl'>$levelName</a><br>";
+		echo "$levelName<br>";
 	}
 	echo "</td></tr>";
 }
@@ -28,4 +25,3 @@ foreach($result as &$pack){
 */
 ?>
 </table>
-<?php include "../../../incl/load_bottom.php" ?>

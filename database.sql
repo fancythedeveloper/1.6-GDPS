@@ -243,6 +243,7 @@ CREATE TABLE `levels` (
   `starHall` int(11) NOT NULL DEFAULT 0,
   `starEpic` int(11) NOT NULL DEFAULT 0,
   `starDemonDiff` int(11) NOT NULL DEFAULT 0,
+  `starVote` decimal(4,2) NOT NULL DEFAULT 0.0,
   `userID` int(11) NOT NULL,
   `extID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `unlisted` int(11) NOT NULL,

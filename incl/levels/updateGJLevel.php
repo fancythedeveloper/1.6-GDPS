@@ -54,6 +54,7 @@ if(!is_numeric($levelID)){
 		$uploadDate = date("o/n/d @ g-i a", $result["uploadDate"]);
 		$updateDate = date("o/n/d @ g-i a", $result["updateDate"]);
 		$rateDate = date("o/n/d @ g-i a", $result["rateDate"]);
+		$starVote = $result['starVote'];
 		//password xor
 		$pass = $result["password"];
 		$desc = $result["levelDesc"];
@@ -69,15 +70,15 @@ if(!is_numeric($levelID)){
 		}else{
 		    if(!empty($desc)) {
 		        if ($rateDate != 0 && ($result["starStars"] > 0 || $result["starFeatured"] == 1)) {
-                    $desc = $ep->remove(base64_decode($desc)) . " (Uploaded " . $uploadDate . ", updated " . $updateDate . ", rated " . $rateDate . ")";
+                    $desc = $ep->remove(base64_decode($desc)) . " (Uploaded " . $uploadDate . ", updated " . $updateDate . ", rated " . $rateDate . ". Average star vote - $starVote)";
                 } else {
-		            $desc = $ep->remove(base64_decode($desc)) . " (Uploaded " . $uploadDate . ", updated " . $updateDate . ")";
+		            $desc = $ep->remove(base64_decode($desc)) . " (Uploaded " . $uploadDate . ", updated " . $updateDate . ". Average star vote - $starVote)";
                 }
 		    } else {
 		        if ($rateDate != 0 && ($result["starStars"] > 0 || $result["starFeatured"] == 1)) {
-                    $desc = "Uploaded " . $uploadDate . ", updated " . $updateDate . ", rated" . $rateDate;
+                    $desc = "Uploaded " . $uploadDate . ", updated " . $updateDate . ", rated" . $rateDate . ". Average star vote - $starVote";
                 } else {
-		            $desc = "Uploaded " . $uploadDate . ", updated " . $updateDate;
+		            $desc = "Uploaded " . $uploadDate . ", updated " . $updateDate . ". Average star vote - $starVote";
 		        }
 		    }
 		}

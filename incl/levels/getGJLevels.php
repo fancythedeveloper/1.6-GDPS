@@ -192,7 +192,8 @@ if($type==16){ //HALL OF FAME
 	$order = "rateDate DESC,uploadDate";
 }
 if($type==7){ //MAGIC
-	$params[] = "objects > 1999";
+    $t = time() - 2592000;
+	$params[] = "starStars = 0 AND levelLength >= 2 AND updateDate > $t";
 }
 if($type==10){ //MAP PACKS
 	$order = false;

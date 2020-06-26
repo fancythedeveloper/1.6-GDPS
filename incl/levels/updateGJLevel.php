@@ -1,4 +1,5 @@
 <?php
+ini_set("precision", 3);
 chdir(dirname(__FILE__));
 include "../lib/connection.php";
 require "../lib/XORCipher.php";

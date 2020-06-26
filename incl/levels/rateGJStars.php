@@ -1,6 +1,6 @@
 <?php
 
-ini_set("precision", 2);
+ini_set("precision", 3);
 chdir(dirname(__FILE__));
 include "../lib/connection.php";
 require_once "../lib/GJPCheck.php";

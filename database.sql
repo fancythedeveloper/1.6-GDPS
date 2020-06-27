@@ -230,6 +230,7 @@ CREATE TABLE `levels` (
   `levelInfo` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `starDifficulty` int(11) NOT NULL DEFAULT 0 COMMENT '0=N/A 10=EASY 20=NORMAL 30=HARD 40=HARDER 50=INSANE 50=AUTO 50=DEMON',
+  `diffOverride` int(11) NOT NULL DEFAULT 0 COMMENT 'Use this if difficulty voting is being abused.',
   `downloads` int(11) NOT NULL DEFAULT 300,
   `likes` int(11) NOT NULL DEFAULT 100,
   `starDemon` int(1) NOT NULL DEFAULT 0,

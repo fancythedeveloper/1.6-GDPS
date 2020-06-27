@@ -50,6 +50,10 @@ $query3 = $db->prepare("SELECT * FROM `actions` WHERE `type` = '21' AND `value` 
 $query3->execute();
 $result = $query3->fetchAll();
 
+$query5 = $db->prepare("SELECT * FROM `levels` WHERE `levelID` = '$levelID'");
+$query5->execute();
+$result2 = $query5->fetchAll();
+
 $total = 0.0;
 
 foreach ($result as &$vote) {
@@ -59,8 +63,10 @@ foreach ($result as &$vote) {
 $averageVote = round($total / $count, -1);
 
 // update the recommended star value
-$query4 = $db->prepare("UPDATE `levels` SET `starDifficulty` = '$averageVote' WHERE `levels`.`levelID` = $levelID");
-$query4->execute();
+if ($result2['diffOverride'] == 0 && $count >= 10 && $result2['starDemon'] == 1 && $result2['starAuto'] == '1') {
+    $query4 = $db->prepare("UPDATE `levels` SET `starDifficulty` = '$averageVote' WHERE `levels`.`levelID` = $levelID");
+    $query4->execute();
+}
 
 echo $averageVote;
 

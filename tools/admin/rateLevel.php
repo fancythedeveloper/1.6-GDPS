@@ -1,5 +1,5 @@
 <?php
-$pw = "6309902050cb219dddbe7138d376e656";
+$pw = "Password in MD5 goes here";
 include "../../incl/lib/connection.php";
 if (isset($_POST['pw'])) {
     $entered = md5($_POST['pw']);

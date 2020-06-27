@@ -1,27 +1,15 @@
 <?php
-$pw = "Enter MD5 hash of password here";
+$pw = "6309902050cb219dddbe7138d376e656";
 include "../../incl/lib/connection.php";
 if (isset($_POST['pw'])) {
     $entered = md5($_POST['pw']);
     if ($entered == $pw) {
         $levelID = $_POST['levelID'];
-        if ($_POST['difficulty'] == "NA") {
-            $starDifficulty = 0;
-        } else if ($_POST['difficulty'] == "Easy") {
-            $starDifficulty = 10;
-        } else if ($_POST['difficulty'] == "Normal") {
-            $starDifficulty = 20;
-        } else if ($_POST['difficulty'] == "Hard") {
-            $starDifficulty = 30;
-        } else if ($_POST['difficulty'] == "Harder") {
-            $starDifficulty = 40;
-        } else if ($_POST['difficulty'] == "Insane") {
-            $starDifficulty = 50;
+        if ($_POST['difficulty'] == "Unchanged") {
+            echo "";
         } else if ($_POST['difficulty'] == "Demon") {
-            $starDifficulty = 50;
             $starDemon = 1;
         } else if ($_POST['difficulty'] == "Auto") {
-            $starDifficulty = 50;
             $starAuto = 1;
         }
         if (!isset($starDemon)) {
@@ -37,7 +25,7 @@ if (isset($_POST['pw'])) {
             $starFeatured = 0;
         }
         $rateDate = time();
-        $query = $db->prepare("UPDATE `levels` SET `starDifficulty` = '".$starDifficulty."', `starStars` = '".$starStars."', `starDemon` = '".$starDemon."', `starAuto` = '".$starAuto."',`starFeatured` = '".$starFeatured."',`rateDate` = '".$rateDate."' WHERE `levels`.`levelID` = ".$levelID.";");
+        $query = $db->prepare("UPDATE `levels` SET `starStars` = '".$starStars."', `starDemon` = '".$starDemon."', `starAuto` = '".$starAuto."',`starFeatured` = '".$starFeatured."',`rateDate` = '".$rateDate."' WHERE `levels`.`levelID` = ".$levelID.";");
         $query->execute();
         echo "Level Rated.";
     } else {
@@ -49,12 +37,7 @@ if (isset($_POST['pw'])) {
     echo "Level ID: <input name='levelID' /><br>";
     echo "<label for='difficulty'>Difficulty: </label>";
     echo "<select name='difficulty'>";
-    echo "<option value='NA'>NA</option>";
-    echo "<option value='Easy'>Easy</option>";
-    echo "<option value='Normal'>Normal</option>";
-    echo "<option value='Hard'>Hard</option>";
-    echo "<option value='Harder'>Harder</option>";
-    echo "<option value='Insane'>Insane</option>";
+    echo "<option value='Unchanged'>Not Demon or Auto (Difficulty is based on votes)</option>";
     echo "<option value='Demon'>Demon</option>";
     echo "<option value='Auto'>Auto</option>";
     echo "</select><br>";

@@ -45,67 +45,13 @@ class mainLib {
 				return "Club Step by DJ Nate";
 				break;
 			case 14:
-				return "Electrodynamix by DJ Nate";
+				return "Ultimate Destruction by TMM43";
 				break;
 			case 15:
-				return "Hexagon Force by Waterflame";
+				return "Solar Wind by Jumper";
 				break;
 			case 16:
-				return "Blast Processing by Waterflame";
-				break;
-			case 17:
-				return "Theory of Everything 2 by DJ Nate";
-				break;
-			case 18:
-				return "Geometrical Dominator by Waterflame";
-				break;
-			case 19:
-				return "Deadlocked by F-777";
-				break;
-			case 20:
-				return "Fingerbang by MDK";
-				break;
-			case 21:
-				return "The Seven Seas by F-777";
-				break;
-			case 22:
-				return "Viking Arena by F-777";
-				break;
-			case 23:
-				return "Airborne Robots by F-777";
-				break;
-			case 24:
-				return "Secret by RobTopGames";
-				break;
-			case 25:
-				return "Payload by Dex Arson";
-				break;
-			case 26:
-				return "Beast Mode by Dex Arson";
-				break;
-			case 27:
-				return "Machina by Dex Arson";
-				break;
-			case 28:
-				return "Years by Dex Arson";
-				break;
-			case 29:
-				return "Frontlines by Dex Arson";
-				break;
-			case 30:
-				return "Space Pirates by Waterflame";
-				break;
-			case 31:
-				return "Striker by Waterflame";
-				break;
-			case 32:
-				return "Embers by Dex Arson";
-				break;
-			case 33:
-				return "Round 1 by Dex Arson";
-				break;
-			case 34:
-				return "Monster Dance Off by F-777";
+				return "The Falling Mysts by Dimrain47";
 				break;
 			default:
 				return "Unknown by DJVI";

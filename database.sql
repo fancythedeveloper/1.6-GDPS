@@ -549,7 +549,7 @@ CREATE TABLE `users` (
   `isBanned` int(11) NOT NULL DEFAULT 0,
   `isCreatorBanned` int(11) NOT NULL DEFAULT 0,
   `title` varchar(255) NOT NULL DEFAULT '',
-  `country` varchar(3) NOT NULL DEFAULT '',
+  `country` varchar(3) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --

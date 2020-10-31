@@ -5,10 +5,10 @@ Supported version of Geometry Dash: 1.0-1.6 (I assume :P)
 
 Required version of PHP: 5.4+ (tested up to 7.3.11 by Cvolton)
 
-### Why isn't this a fork?
-I already made too many changes to want to fork the files. I don't like it either
+### Feel like I've seen this before
+This used to be a fork of Flux3on's 1.6 GDPS, but I guess the original repository got deleted, so this is the main now.
 
-### Setup
+### Really Basic Setup
 1) Upload the files on a webserver
 2) Import database.sql into a MySQL/MariaDB database
 3) Edit the links in config/connection.php

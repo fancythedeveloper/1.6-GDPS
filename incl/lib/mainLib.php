@@ -45,16 +45,28 @@ class mainLib {
 				return "Club Step by DJ Nate";
 				break;
 			case 14:
-				return "Ultimate Destruction by TMM43";
+				return "Electrodynamix by DJ Nate";
 				break;
 			case 15:
-				return "Solar Wind by Jumper";
+				return "Hexagon Force by Waterflame";
 				break;
 			case 16:
-				return "The Falling Mysts by Dimrain47";
+				return "Blast Processing by Waterflame";
+				break;
+			case 17:
+				return "Theory of Everything 2 by DJ Nate";
+				break;
+			case 18:
+				return "Geometrical Dominator by Waterflame";
+				break;
+			case 19:
+				return "Deadlocked by F-777";
+				break;
+			case 20:
+				return "Fingerbang by MDK";
 				break;
 			default:
-				return "Unknown by DJVI";
+				return "Unknown by DJFY";
 				break;
 			
 		}

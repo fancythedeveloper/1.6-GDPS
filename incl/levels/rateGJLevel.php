@@ -63,7 +63,7 @@ foreach ($result as &$vote) {
 $averageVote = round($total / $count, -1);
 
 // update the recommended star value
-if ($result2['diffOverride'] == 0 && $count >= 10 && $result2['starDemon'] == 1 && $result2['starAuto'] == '1') {
+if ($result2['diffOverride'] == 0 && $count >= 10) {
     $query4 = $db->prepare("UPDATE `levels` SET `starDifficulty` = '$averageVote' WHERE `levels`.`levelID` = $levelID");
     $query4->execute();
 }
